@@ -12,9 +12,11 @@
     <main class="container">
         <img class="logo" src="/Assets/logo.png" alt="logo da calculadora gasolina ou álcool">
         <h1 class="title">Qual a melhor opção??</h1>
-        <form class="form">
+
+        <form onsubmit="calcular(event)" class="form">
             <label>Alcool preço por litro:</label>
              <input
+                id="alcool"
                  class="input"
                 type="number"
                 placeholder="3.80"
@@ -23,6 +25,7 @@
              />
              <label>gasolina preço por litro:</label>
              <input
+                id="gasolina"
                 class="input"
                 type="number"
                 placeholder="5.87"
@@ -30,23 +33,24 @@
                 required
              />
 
-             <input class="button" type="submit" value="calcular"/>
+             <input class="button" type="submit" value="calcular" />
         </form>
 
-        <section class="result">
+        <section id="content-result" class="result hide">
             <span id="text-result">Compensa usar álcool</span>
-            <span>Gasolina</span>
-            <span>Álcool</span>
+            <span id="gasolina-result">Gasolina R$ 5.70</span>
+            <span id="alcool-result">Álcool R$ 3.79</span>
         </section>
-    </main>
+    </main> 
 
     <div class="info">
         <span class="tooltip">veja como é feito o calculo</span>
-        <a href="#" target="_blank">
+        <a href="calculo.html" target="_blank">
             <img class="info-img" src="Assets/info.png" alt="como é feito o calculo!">
         </a>
     </div>
     
+    <script src="script.js"></script>
 </body>
 
 </html>
